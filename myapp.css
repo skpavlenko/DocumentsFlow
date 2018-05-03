@@ -1,0 +1,30 @@
+.schema{    
+    width: 50%;
+    min-height: 150px;
+    float: left;
+}
+.docs{    
+    width: 50%;
+    min-height: 150px;
+    margin-left: 70%;
+}
+.doc{    
+    text-decoration: underline;
+}
+.tarea{
+	width: 1200px;
+	height: 320px;
+}
+.selected{
+    background-color: yellow;
+    text-decoration: none;
+}
+.header{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+.tddl{
+	width: 400px;
+	height: 300px;
+}

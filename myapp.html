@@ -1,0 +1,131 @@
+<head>
+  <title>BizzStream</title>
+</head>
+<body>
+  <h1 class="header">BizzStream</h1>
+  {{> docslist}}
+</body>
+
+<template name="docslist">
+  <div class="schema">
+    <div class="deflayout">
+     {{> addDL}}
+   </div>
+   <div>
+     {{> addSchema}}
+   </div>
+ </div>
+ <div class="docs">
+   <h2>Form</h2>
+   {{> addDocForm}}
+   <br>
+   <h2>Documents list</h2>
+   <ul>
+    {{#each doc}}
+    <li class="doc {{selectedClass}}">{{getrow}}</li>
+    {{/each}}
+  </ul>
+  {{#if selectedDoc}}
+  <li>Selected Document: {{selectedDoc.name}}</li>
+  <li>
+    <button class="remove">Remove doc</button>
+  </li>
+  {{/if}}
+  <br>
+  Count of docs: {{docscount}}
+</div>
+</template>
+
+<template name="addDocForm">
+  <form>
+    {{#each fieldslist}}
+    {{label}}:<br>
+    <input type={{type}} name={{name}}><br><br>
+    {{/each}}
+    {{#each buttonslist}}
+    <input type="submit" value={{label}}>
+    {{/each}}
+  </form>
+</template>
+
+<template name="addSchema">
+  <form>
+    <h2>View</h2>
+    <p><textarea class="tarea" name="tview" placeholder="Insert a View">{
+      "header":{
+      "rows":[
+      {
+        "columns":[
+        {
+          "_id": "cc4cb134-fda0-44d8-8e92-e42ebbceb415",
+          "label": "Client Name",
+          "name":"name",
+          "type": "Text",
+          "maxLength": 100
+        },
+        {
+          "_id": "228b905f-4a43-4a40-b829-0c6a04ad4782",
+          "label":"Client Age",
+          "name": "age",
+          "type": "number"
+        }
+        ]
+      }
+      ]
+    },
+    "buttons":[
+    "save"
+    ]
+  }</textarea></p>
+  <p><input type="submit" value='Update View'></p>
+</form>
+</template>
+
+<template name="addDL">
+  <form>
+    <h2>Document Definitions and Layout</h2>
+    <textarea class = "tddl" name="tddef" placeholder="Insert a Document Definitions">{
+      "schema":{
+      "fields":[
+      {
+        "_id": "cc4cb134-fda0-44d8-8e92-e42ebbceb415",
+        "label": "Client Name",
+        "name":"name",
+        "type": "Text",
+        "maxLength": 100
+      },
+      {
+        "_id": "228b905f-4a43-4a40-b829-0c6a04ad4782",
+        "label":"Client Age",
+        "name": "age",
+        "type": "number"
+      }
+      ]
+    }
+  }
+</textarea>
+
+<textarea class = "tddl" name="tlayout" placeholder="Insert a Layout">{
+  "header":{
+  "rows":[
+  {
+    "columns":[
+    {
+      "fieldId": "cc4cb134-fda0-44d8-8e92-e42ebbceb415"
+    },
+    {
+      "fieldId": "228b905f-4a43-4a40-b829-0c6a04ad4782"
+    }
+    ]
+  }
+  ]
+},
+"buttons":[
+"save"
+]
+}
+</textarea>
+
+<p><input type="submit" value='Update Document Definitions and Layout'></p>
+</form>
+</template>
