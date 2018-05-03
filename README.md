@@ -8,7 +8,7 @@
 
 <h3 id="markdown-header-user-guide">User guide</h3>
 
-Dynamic list displayed according to the declarative scheme
+Dynamic list was displayed according to the declarative scheme
 
 <a><img style="max-width:100%;" alt="Application screenshot" src="https://github.com/skpavlenko/DocumentsFlow/blob/master/Overview.png"></a>
 
