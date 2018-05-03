@@ -9,4 +9,4 @@ Dynamic list displayed according to the declarative scheme
 
 <h3 id="markdown-header-user-guide">User guide</h3>
 
-<a><img style="max-width:100%;" alt="Application screenshot" src="https://github.com/skpavlenko/WS/blob/master/screenshots/wikislist.jpg"></a>
+<a><img style="max-width:100%;" alt="Application screenshot" src="https://github.com/skpavlenko/DocumentsFlow/blob/master/Overview.png"></a>
